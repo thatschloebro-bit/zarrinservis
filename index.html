@@ -113,6 +113,53 @@
             flex: 1;
         }
 
+        .buttons-row {
+            display: flex;
+            gap: 12px;
+            margin: 20px 0;
+        }
+
+        .map-btn, .instagram-btn {
+            flex: 1;
+            display: block;
+            padding: 10px 12px;
+            border-radius: 60px;
+            text-decoration: none;
+            font-weight: bold;
+            text-align: center;
+            transition: 0.2s;
+            font-size: 0.85rem;
+        }
+
+        .map-btn {
+            background: #ffa500;
+            color: #000;
+        }
+
+        .map-btn:hover {
+            background: rgba(250,191,0,1.00);
+            transform: scale(0.98);
+        }
+
+        .map-btn:active {
+            transform: scale(0.97);
+            background: #ff8c00;
+        }
+
+        .instagram-btn {
+            background: linear-gradient(45deg, #f09433, #d62976, #962fbf);
+            color: white;
+        }
+
+        .instagram-btn:active {
+            transform: scale(0.97);
+        }
+		
+        .instagram-btn:hover {
+            background: linear-gradient(45deg, #d62976, #962fbf, #f09433);
+            transform: scale(0.98);
+        }
+
         .about-us {
             margin: 20px 0;
             background: rgba(255,255,255,0.06);
@@ -174,54 +221,6 @@
             line-height: 1.5;
         }
 
-        /* دکمه‌های کوچک */
-        .buttons-row {
-            display: flex;
-            gap: 12px;
-            margin-top: 20px;
-        }
-
-        .map-btn, .instagram-btn {
-            flex: 1;
-            display: block;
-            padding: 10px 12px;
-            border-radius: 60px;
-            text-decoration: none;
-            font-weight: bold;
-            text-align: center;
-            transition: 0.2s;
-            font-size: 0.85rem;
-        }
-
-        .map-btn {
-            background: #ffa500;
-            color: #000;
-        }
-
-        .map-btn:hover {
-            background: rgba(250,191,0,1.00);
-            transform: scale(0.98);
-        }
-
-        .map-btn:active {
-            transform: scale(0.97);
-            background: #ff8c00;
-        }
-
-        .instagram-btn {
-            background: linear-gradient(45deg, #f09433, #d62976, #962fbf);
-            color: white;
-        }
-
-        .instagram-btn:active {
-            transform: scale(0.97);
-        }
-		
-        .instagram-btn:hover {
-            background: linear-gradient(45deg, #d62976, #962fbf, #f09433);
-            transform: scale(0.98);
-        }
-
         footer {
             margin-top: 35px;
             text-align: center;
@@ -272,6 +271,17 @@
         </div>
     </div>
 
+    <div class="buttons-row">
+        <a href="https://balad.ir/p/3Rf2gkkCmIDNmB" 
+           target="_blank" rel="noopener noreferrer" class="map-btn">
+             مسیریابی در بلد
+        </a>
+        <a href="https://www.instagram.com/otoservis_zarrin" 
+           target="_blank" rel="noopener noreferrer" class="instagram-btn">
+             اینستاگرام
+        </a>
+    </div>
+
     <div class="about-us">
         <h3><i class="fas fa-info-circle"></i> درباره ما</h3>
         <p>ما در اتو سرویس زرین با بیش از ۱۵ سال سابقه کاری درخشان، همواره تضمین کیفیت و وقت شناسی را اولویت خود می‌دانیم. با بهره‌گیری از تجهیزات مدرن و تخصص و مهارت بالای تیم فنی، تمامی خدمات تعویض روغنی، لاستیک و بالانس چرخ را با بالاترین استانداردها ارائه می‌دهیم. رضایت شما، افتخار ماست.</p>
@@ -297,18 +307,6 @@
         📍 آدرس:<br>
         کمربند میانی، بعد از تقاطع شهید بهشتی،<br>
         به سمت میدان تیر، اول روگذر فروزنده
-    </div>
-	
-    <div class="buttons-row">
-        <a href="https://balad.ir/p/3Rf2gkkCmIDNmB" 
-           target="_blank" rel="noopener noreferrer" class="map-btn">
-             مسیریابی در بلد
-        </a>
-
-        <a href="https://www.instagram.com/otoservis_zarrin" 
-           target="_blank" rel="noopener noreferrer" class="instagram-btn">
-             اینستاگرام
-        </a>
     </div>
 
     <footer>
