@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes, viewport-fit=cover">
+    <title>اتو سرویس زرین</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', 'Tahoma', 'Poppins', sans-serif;
+            min-height: 100vh;
+            background-image: url("../img/bg.jpg.png");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            padding: 20px;
+        }
+
+        @media (max-width: 600px) {
+            body {
+                justify-content: center;
+            }
+        }
+
+        .glass-card {
+            width: 100%;
+            max-width: 460px;
+            background: rgba(0, 0, 0, 0);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(18px);
+            border-radius: 30px;
+            border: 1.3px solid rgba(255, 238, 62, 0.74);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(255,255,255,0.08);
+            padding: 28px 24px;
+            color: white;
+            transition: all 0.3s ease;
+        }
+
+        .logo-area {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 28px;
+            border-bottom: 1px solid rgba(255,255,255,0.15);
+            padding-bottom: 20px;
+        }
+
+        .logo-icon {
+            width: 80px;
+            height: 80px;
+			background: transparent;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 32px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+			
+        }
+  
+        .shop-name h1 {
+            font-size: 1.6rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+
+        .shop-name p {
+            font-size: 0.8rem;
+            opacity: 0.85;
+        }
+
+        .services {
+            margin: 25px 0;
+        }
+
+        .service-item {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            background: rgba(255,255,255,0.08);
+            margin: 12px 0;
+            padding: 12px 18px;
+            border-radius: 60px;
+            font-weight: 500;
+            backdrop-filter: blur(4px);
+            transition: 0.2s;
+        }
+
+        .service-icon {
+            width: 38px;
+            height: 38px;
+            min-width: 38px;
+            border: 2px solid #ffcc00;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(255, 204, 0, 0.1);
+            font-size: 18px;
+            color: #ffcc00;
+        }
+
+        .service-text {
+            flex: 1;
+        }
+
+        /*about us*/
+        .about-us {
+            margin: 20px 0;
+            background: rgba(255,255,255,0.06);
+            padding: 16px;
+            border-radius: 28px;
+            font-size: 0.85rem;
+            line-height: 1.7;
+            text-align: justify;
+        }
+
+        .about-us h3 {
+            color: #ffcc00;
+            margin-bottom: 10px;
+            font-size: 1.1rem;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .contact-info {
+            margin: 20px 0;
+            background: rgba(0,0,0,0.4);
+            padding: 18px;
+            border-radius: 32px;
+            backdrop-filter: blur(4px);
+        }
+
+        .phone {
+            font-size: 1.15rem;
+            font-weight: bold;
+            direction: ltr;
+            text-align: right;
+            margin: 8px 0;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .phone span:first-child {
+            font-size: 0.85rem;
+            opacity: 0.9;
+        }
+
+        .hours {
+            margin: 15px 0 0;
+            line-height: 1.8;
+            border-top: 1px solid rgba(255,255,255,0.15);
+            padding-top: 14px;
+        }
+
+        .address {
+            margin: 20px 0;
+            background: rgba(255,255,255,0.06);
+            padding: 14px;
+            border-radius: 28px;
+            font-size: 0.9rem;
+            line-height: 1.5;
+        }
+
+        .map-btn {
+            display: block;
+            background: #ffa500;
+            color: #000;
+            padding: 14px 18px;
+            border-radius: 60px;
+            text-decoration: none;
+            font-weight: bold;
+            text-align: center;
+            margin-top: 20px;
+            transition: 0.2s;
+            font-size: 1rem;
+        }
+
+        .map-btn:hover {
+            background: rgba(250,191,0,1.00);
+            transform: scale(0.98);
+        }
+
+        .map-btn:active {
+            transform: scale(0.97);
+            background: #ff8c00;
+        }
+
+        /*ing button*/
+        .instagram-btn {
+            display: block;
+            background: linear-gradient(45deg, #f09433, #d62976, #962fbf);
+            color: white;
+            padding: 14px 18px;
+            border-radius: 60px;
+            text-decoration: none;
+            font-weight: bold;
+            text-align: center;
+            margin-top: 15px;
+            transition: 0.2s;
+            font-size: 1rem;
+        }
+
+        .instagram-btn:active {
+            transform: scale(0.97);
+        }
+		
+		.instagram-btn:hover {
+    background: linear-gradient(45deg, #d62976, #962fbf, #f09433);
+    transform: scale(0.98);
+}
+
+        footer {
+            margin-top: 35px;
+            text-align: center;
+            font-size: 0.7rem;
+            opacity: 0.6;
+            border-top: 1px solid rgba(255,255,255,0.15);
+            padding-top: 18px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="glass-card">
+    <div class="logo-area">
+       <div class="logo-icon">
+    <img src="../img/logo.jpg.jpeg" alt="zarrin" style="width: 100%; height: 100%; object-fit: cover; border-radius: 50%;">
+</div>
+        <div class="shop-name">
+            <h1>اتو سرویس زرین</h1>
+            <p>تعویض روغن و خدمات لاستیک</p>
+        </div>
+    </div>
+
+    <div class="services">
+        <div class="service-item">
+            <div class="service-icon">
+                <i class="fas fa-oil-can"></i>
+            </div>
+            <div class="service-text">تعویض روغن انواع خودرو</div>
+        </div>
+        <div class="service-item">
+            <div class="service-icon">
+                <i class="fas fa-car"></i>
+            </div>
+            <div class="service-text">فروش و خدمات لاستیک</div>
+        </div>
+        <div class="service-item">
+            <div class="service-icon">
+                <i class="fas fa-balance-scale"></i>
+            </div>
+            <div class="service-text">بالانس و خدمات تخصصی چرخ</div>
+        </div>
+        <div class="service-item">
+            <div class="service-icon">
+                <i class="fas fa-bolt"></i>
+            </div>
+            <div class="service-text">خدمات سریع و مطمئن</div>
+        </div>
+    </div>
+
+    <!--about us-->
+    <div class="about-us">
+        <h3><i class="fas fa-info-circle"></i> درباره ما</h3>
+        <p>ما در اتو سرویس زرین با بیش از ۱۵ سال سابقه کاری درخشان، همواره تضمین کیفیت و وقت شناسی را اولویت خود می‌دانیم. با بهره‌گیری از تجهیزات مدرن و تخصص و مهارت بالای تیم فنی، تمامی خدمات تعویض روغن، لاستیک و بالانس چرخ را با بالاترین استانداردها ارائه می‌دهیم. رضایت شما، افتخار ماست.</p>
+    </div>
+
+    <div class="contact-info">
+        <div class="phone">
+            <span>📞 شماره تماس:</span>
+            <span>09387204673</span>
+        </div>
+        <div class="phone">
+            <span>📞 شماره تماس:</span>
+            <span>09148472216</span>
+        </div>
+        <div class="hours">
+            🕘 ساعت کاری:<br>
+            همه روزه: 8:30 تا 10 شب <br>
+            جمعه‌ها: 10 صبح تا 10 شب
+        </div>
+    </div>
+
+    <div class="address">
+        📍 آدرس:<br>
+        کمربند میانی، بعد از تقاطع شهید بهشتی،<br>
+        به طرف میدان تیر، جنب روگذر فروزنده
+    </div>
+
+    <!--balad-->
+    <a href="https://balad.ir/p/3Rf2gkkCmIDNmB" 
+       target="_blank" rel="noopener noreferrer" class="map-btn">
+         مسیریابی در بلد
+    </a>
+
+   <!--instagram-->
+    <a href="https://www.instagram.com/otoservis_zarrin" 
+       target="_blank" rel="noopener noreferrer" class="instagram-btn">
+         اینستاگرام اتو سرویس زرین
+    </a>
+
+    <footer>
+        تمام حقوق این سایت محفوظ می‌باشد.<br>
+		made by zarrin
+    </footer>
+</div>
+
+</body>
+</html>
