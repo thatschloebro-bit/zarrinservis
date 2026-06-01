@@ -115,49 +115,43 @@
 
         .buttons-row {
             display: flex;
-            gap: 12px;
+            gap: 15px;
             margin: 20px 0;
+            justify-content: center;
         }
 
-        .map-btn, .instagram-btn {
-            flex: 1;
-            display: block;
-            padding: 10px 12px;
+        .app-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 10px;
             border-radius: 60px;
-            text-decoration: none;
-            font-weight: bold;
-            text-align: center;
             transition: 0.2s;
-            font-size: 0.85rem;
+            width: 50px;
+            height: 50px;
         }
 
-        .map-btn {
-            background: #ffa500;
-            color: #000;
+        .app-btn:hover {
+            transform: scale(0.95);
         }
 
-        .map-btn:hover {
-            background: rgba(250,191,0,1.00);
-            transform: scale(0.98);
+        .app-btn:active {
+            transform: scale(0.92);
         }
 
-        .map-btn:active {
-            transform: scale(0.97);
-            background: #ff8c00;
+        .app-icon {
+            width: 32px;
+            height: 32px;
+            object-fit: contain;
+        }
+
+        /* رنگ‌های دکمه‌ها */
+        .balad-btn {
+            background: #2196F3;
         }
 
         .instagram-btn {
             background: linear-gradient(45deg, #f09433, #d62976, #962fbf);
-            color: white;
-        }
-
-        .instagram-btn:active {
-            transform: scale(0.97);
-        }
-		
-        .instagram-btn:hover {
-            background: linear-gradient(45deg, #d62976, #962fbf, #f09433);
-            transform: scale(0.98);
         }
 
         .about-us {
@@ -273,12 +267,12 @@
 	
     <div class="buttons-row">
         <a href="https://balad.ir/p/3Rf2gkkCmIDNmB" 
-           target="_blank" rel="noopener noreferrer" class="map-btn">
-             مسیریابی در بلد
+           target="_blank" rel="noopener noreferrer" class="app-btn balad-btn">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/Balad_App_Icon.png/480px-Balad_App_Icon.png" alt="بلد" class="app-icon">
         </a>
         <a href="https://www.instagram.com/otoservis_zarrin" 
-           target="_blank" rel="noopener noreferrer" class="instagram-btn">
-             اینستاگرام
+           target="_blank" rel="noopener noreferrer" class="app-btn instagram-btn">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Instagram_icon.png/480px-Instagram_icon.png" alt="اینستاگرام" class="app-icon">
         </a>
     </div>
 
